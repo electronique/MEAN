@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Stars</title>
+    <script type="javascript">
+        
+    </script>
+</head>
+<body>
+    <div id="star">
+    </div> 
+   
+</body>
+<script>
+    function stars(){
+        let x = [4, "Tom", 1, "Michael", 5, 7, "Jimmy Smith"]
+            for(let i = 0;i<x.length;i++){
+               
+                if(isNaN(x[i]) == false){
+                    for(let j=0;j<x[i];j++){
+                        let new_star = document.createElement('span');
+                        new_star.innerHTML = "*";
+                        document.getElementById("star").appendChild(new_star);
+                }
+                }
+                if(isNaN(x[i])==true){
+                    console.log(x[i]); //finish string into array
+                    for(let j=0;j<x[i];j++){
+                        let new_star = document.createElement('span');
+                        new_star.innerHTML = "actor";
+                        document.getElementById("star").appendChild(new_star);
+                }
+                }
+                    let space = document.createElement('br');
+                    document.getElementById("star").appendChild(space);
+                }
+            }
+       stars();
+
+</script>   
+</html>
