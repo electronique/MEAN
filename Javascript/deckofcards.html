@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+</head>
+<body>
+    
+<div id="game">
+
+</div>
+
+    <script>
+        let deck =[];
+        let suits = ['a','b','c','d'];
+        let highcard = ['a','b','d','e'];
+        class Deck {
+            shuffle(){
+            }
+            deal(){
+                    let max = 10;
+                    let min = 0;
+                    let cardnumber = Math.floor(Math.random() * (max - min + 1)) + min;
+                    let new_card = document.createElement('span');
+                        new_card.innerHTML = '\&#x1f0'+suits[1]+cardnumber;
+                        document.getElementById('game').appendChild(new_card);
+            }
+            reset(){
+            }
+
+            displayAll(){
+                for(let j = 0;j<4;j++){
+                for(let i=1;i<10;i++){
+                    deck.push(i);
+                    let new_card = document.createElement('span');
+                        new_card.innerHTML = '\&#x1f0'+suits[j]+i;
+                        document.getElementById('game').appendChild(new_card);
+            }
+                for(let k = 1;k<4;k++){
+                    let new_card = document.createElement('span');
+                        new_card.innerHTML = '\&#x1f0'+suits[j]+highcard[k];
+                        console.log(suits[j]+highcard[k]);
+                        document.getElementById('game').appendChild(new_card);
+                    
+            }   
+            }
+            
+            }
+        }
+
+        class Player {
+//The Player should have a name
+//The Player should have a hand
+//The Player should be able to take a card (use the deck.deal method)
+//The Player should be able to discard a card
+            constructor(x){
+                this.name = x;
+            }
+
+
+            hand(){
+                newdeck.deal();
+            }
+            takecard(){
+
+            }
+            discard(){
+
+            }
+        }
+
+    
+        newdeck = new Deck();
+        //newplayer = new Player('Morty');
+        //newplayer();
+        newdeck.displayAll();
+        </script>  
+        <script>
+            $(document).ready(function(){
+                $("span").hover(function(){
+                    $(this).css("border", "blue");
+                    }, function(){
+                    $(this).css("border", "white");
+                });
+            });
+            </script>  
+</body>
+</html>
+

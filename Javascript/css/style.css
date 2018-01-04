@@ -1,0 +1,12 @@
+@font-face {
+    font-family: Symbola;
+    src: url("fonts/Symbola.ttf") format("truetype");
+
+
+  
+  }
+
+body{
+    font-family: 'Symbola',sans-serif;
+    font-size: 6em;
+}

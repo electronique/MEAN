@@ -1,20 +1,34 @@
-function Ninja(ninja1) {
+ function Ninja(ninja, health,speed,strength) {
+    this.name = ninja;
+    this.health = health;
+    this.speed = speed;
+    this.strength = strength;
+    }
 
-    const name = ninja1;
-    this.getName = function() {
-        
-      return name;
 
-    };
-    
-  }
 Ninja.prototype.sayName = function() {
-    console.log(name);
+    console.log(this.name);
+  };
+  Ninja.prototype.showStats = function() {
+    console.log(this.health);
+    console.log(this.speed);
+    console.log(this.strength);
   };
 
-const ninja1 = new Ninja("Hyabusa");
-ninja1.sayName();
+  Ninja.prototype.showStats = function() {
+    console.log(this.health);
+    console.log(this.speed);
+    console.log(this.strength);
+  };
+  Ninja.prototype.drinkSake = function() {
+    console.log('Cheers');
+    this.health = this.health+10;
+    console.log(this.health);
+  };
 
-// -> "My ninja name is Hyabusa!"
-//ninja1.showStats();
-// -> "Name: Hayabusa, Health: 100, Speed: 3, Strength: 3"
+const ninja = new Ninja("Hyabusa",100,3,3);
+ninja.sayName();
+ninja.showStats();
+ninja.drinkSake();
+
+
