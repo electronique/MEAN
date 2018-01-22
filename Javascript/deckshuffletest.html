@@ -10,8 +10,6 @@
 
 </head>
 <body>
-<div id='title'>Welcome to the card game</div>
-<div id='name'></div>
 <div id="game"></div>
     <script>
         let deck =[1,2,3,4,5,6];
@@ -21,21 +19,17 @@
             constructor(x) {
                 this.name = x;
             }
-            shuffle() {
+            shuffle(deck) {
                     var m = deck.length, t, i;
-
                      // While there remain elements to shuffle…
                 while (m) {
-
                     // Pick a remaining element…
                     i = Math.floor(Math.random() * m--);
-
                     // And swap it with the current element.
                 t = deck[m];
                 deck[m] = deck[i];
                 deck[i] = t;
                     }
-
                 return deck;
                 console.log(deck);
                 }
@@ -68,35 +62,11 @@
                 }
             }
         }
-        class Player extends Deck {
-//The Player should have a name
-//The Player should have a hand
-//The Player should be able to take a card (use the deck.deal method)
-//The Player should be able to discard a card
-        constructor(x) {
-                super(x);
-                this.name = x;
-            }
-            hand(){
-                newdeck.deal();
-            }
-            takecard(){
-            }
-            discard(){
-            }
-            playername(){
-                let player = document.createElement('p');
-                player.innerHTML = "The player's name is :" +this.name;
-                document.getElementById('game').appendChild(player);
-            }
-        }
-        //newPlayer = new Player("Morty");
-        //newplayer();
+ 
         newdeck = new Deck();
-        newplayer = new Player('Morty');
-        newplayer.playername();
 
-        newdeck.displayAll();
+       // newdeck.displayAll();
+        newdeck.shuffle();
         </script>  
         <script>
             $(document).ready(function(){

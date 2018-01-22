@@ -5,8 +5,15 @@
 
   
   }
-
 body{
     font-family: 'Symbola',sans-serif;
+    font-size: 1em;
+
+}
+#name{
+    font-size: 1em;
+}
+
+#game{
     font-size: 6em;
 }
